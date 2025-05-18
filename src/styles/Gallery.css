@@ -1,0 +1,85 @@
+/* Gallery.css */
+
+.gallery-container {
+  position: relative;
+  overflow: hidden;
+  background-color: #121212;
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.gallery-slider {
+  display: flex;
+  cursor: grab;
+  align-items: center;
+}
+
+.gallery-slider:active {
+  cursor: grabbing;
+}
+
+.gallery-image {
+  aspect-ratio: 16/9;
+  width: 100vw;
+  flex-shrink: 0;
+  border-radius: 0.75rem;
+  background-color: #2a2a2a;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #333333;
+}
+
+.gallery-dots {
+  margin-top: 1.5rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.gallery-dot {
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 50%;
+  background-color: #6b7280;
+  transition: background-color 0.3s ease;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.gallery-dot:hover {
+  background-color: #9ca3af;
+}
+
+.gallery-dot.active {
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.gradient-edge {
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 6rem;
+}
+
+.gradient-edge.left {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(18, 18, 18, 0.8),
+    rgba(18, 18, 18, 0)
+  );
+}
+
+.gradient-edge.right {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(18, 18, 18, 0.8),
+    rgba(18, 18, 18, 0)
+  );
+}

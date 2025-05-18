@@ -1,0 +1,296 @@
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #6ec1b6;
+  margin: 2rem 0;
+  font-weight: 500;
+}
+
+.meet-doctor {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+.doctor-img {
+  flex: 0 0 auto;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin-right: 2rem;
+}
+
+.doctor-img img {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 100%;
+}
+
+.doctor-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-info h1 {
+  color: #6ec1b6;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.doctor-info span {
+  color: #777;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.doctor-phone {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.doctor-phone span {
+  color: #6ec1b6;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.description p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.doctor-info-button {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.doctor-info-button button:first-child {
+  background-color: #6ec1b6;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.doctor-info-button button:first-child:hover {
+  background-color: #5aa99f;
+}
+
+.doctor-info-button button:last-child {
+  background-color: transparent;
+  color: #6ec1b6;
+  border: 1px solid #6ec1b6;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.doctor-info-button button:last-child:hover {
+  background-color: #6ec1b6;
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .meet-doctor {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .doctor-img {
+    width: 250px;
+    height: 250px;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .doctor-info {
+    text-align: center;
+  }
+
+  .doctor-phone {
+    justify-content: center;
+  }
+
+  .doctor-info-button {
+    justify-content: center;
+  }
+}
+
+.description,
+.descreption {
+  margin-top: 1rem;
+}
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #6ec1b6;
+  margin: 2rem 0;
+  font-weight: 500;
+}
+
+.meet-doctor {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  margin: 2rem auto;
+  max-width: 1200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.doctor-img {
+  position: relative;
+  width: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.doctor-img img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  image-resolution: from-image;
+  border-radius: 0 60% 60% 0;
+}
+
+.doctor-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.doctor-info h1 {
+  color: #6ec1b6;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.doctor-info > span {
+  color: #777;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.doctor-phone {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.doctor-phone img {
+  width: 30px;
+  height: 30px;
+}
+.doctor-phone span {
+  color: #6ec1b6;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+.doctor-phone ::after {
+  content: "";
+  width: calc(100% - 65%);
+  background: rgba(151, 151, 151, 0.2);
+  height: 1px;
+  position: absolute;
+  margin-top: 12px;
+  margin-left: 5px;
+}
+
+.descreption p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.doctor-info-button {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.doctor-info-button button:first-child {
+  background-color: #6ec1b6;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.doctor-info-button button:first-child:hover {
+  background-color: #5aa99f;
+}
+
+.doctor-info-button button:last-child {
+  background-color: transparent;
+  color: #6ec1b6;
+  border: 1px solid #6ec1b6;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.doctor-info-button button:last-child:hover {
+  background-color: #6ec1b6;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .meet-doctor {
+    flex-direction: column;
+  }
+
+  .doctor-img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .doctor-img img {
+    border-radius: 0;
+  }
+
+  .doctor-info {
+    text-align: center;
+  }
+
+  .doctor-phone {
+    justify-content: center;
+  }
+
+  .doctor-info-button {
+    justify-content: center;
+  }
+}

@@ -1,42 +1,275 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px 40px;
+  width: 100%;
+  list-style-type: none;
+  position: fixed;
+  z-index: 2;
+  margin-bottom: 40px;
+}
+
+ul div {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+  font-size: 16px;
+  color: #777;
+  cursor: pointer;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+li:hover {
+  color: #e94e77;
+}
+
+img {
+  height: 50px;
+  width: auto;
+}
+
+ul button {
+  margin: 0 8px;
+  padding: 8px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+ul button:first-child {
+  background-color: white;
+  color: #555;
+  border: 1px solid #ddd;
+  padding: 8px 20px;
+}
+
+ul button:first-child:hover {
+  background-color: #f5f5f5;
+}
+
+ul button:nth-child(2),
+ul button:nth-child(3) {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  color: #555;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+}
+
+ul button:nth-child(2):hover,
+ul button:nth-child(3):hover {
+  background-color: #f5f5f5;
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding-left: 12%;
+  max-width: 600px;
+}
+
+.welcome-text {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.clinic-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.clinic-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 550px;
+}
+
+.slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.slider-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: white;
+  color: #333;
+  border: 2px solid white;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: #333;
+}
+
+.see-more {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+/* Animation for the slider */
+@keyframes slideAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  5% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+.hero-slide {
+  animation: slideAnimation 20s infinite;
+  animation-fill-mode: forwards;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.hero-slide:nth-child(1) {
+  animation-delay: 0s;
+}
+.hero-slide:nth-child(2) {
+  animation-delay: 5s;
+}
+.hero-slide:nth-child(3) {
+  animation-delay: 10s;
+}
+.hero-slide:nth-child(4) {
+  animation-delay: 15s;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hero-slider {
+    height: 500px;
+  }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+  .slide-content {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+  .clinic-title {
+    font-size: 2.5rem;
+  }
+
+  .slider-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 200px;
+  }
+
+  .see-more {
+    bottom: 1rem;
+    right: 1rem;
   }
 }
