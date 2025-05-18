@@ -1,4 +1,3 @@
-import Gallery from "@/components/Gallery";
 import Header from "@/components/Header";
 import LatestUptude from "@/components/LatestUptude";
 import MeetDoctor from "@/components/MeetDoctor";
@@ -12,8 +11,7 @@ export default function Home() {
       <Header />
       <ServicesCard />
       <MeetDoctor />
-      <LatestUptude />
-      <Gallery />
+      <LatestUptude />\
     </>
   );
 }
