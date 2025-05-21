@@ -3,6 +3,7 @@ import LatestUptude from "@/components/LatestUptude";
 import MeetDoctor from "@/components/MeetDoctor";
 import Navbar from "@/components/Navbar";
 import ServicesCard from "@/components/ServicesCard";
+import SliderDoctors from "@/components/SliderDoctors";
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
       <Header />
       <ServicesCard />
       <MeetDoctor />
-      <LatestUptude />\
+      <LatestUptude />
+      <SliderDoctors />
     </>
   );
 }

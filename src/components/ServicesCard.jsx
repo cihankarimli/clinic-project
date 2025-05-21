@@ -1,5 +1,6 @@
 import React from "react";
 import "@/styles/ServicesCard.css";
+import Image from "next/image";
 
 function ServicesCard() {
   const CardData = [
@@ -30,7 +31,7 @@ function ServicesCard() {
       <div className="cards-container">
         {CardData.map((card) => (
           <div key={card.id} className="card">
-            <img src="/generalDentistary.jpeg" />
+            <Image src="/generalDentistary.jpeg" width={100} height={200} />
             <div className="card-content">
               <span>{card.title}</span>
               <p>{card.description}</p>
